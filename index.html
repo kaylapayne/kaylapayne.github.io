@@ -24,10 +24,13 @@
       align-items: center;
       padding: 30px 60px;
       border-bottom: 1px solid #ddd;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     nav .name {
       font-weight: 700;
       font-size: 1.8rem;
+      margin-left: 20px; /* align with left column titles */
     }
     nav .links a {
       position: relative;
@@ -72,11 +75,11 @@
     .left-column p { font-size: 1.1rem; max-width: 450px; color: #333; }
     .left-column a {
       text-decoration: none;
-      color: #666; 
+      color: #222; /* default same as body text */
       font-weight: 600;
       transition: color 0.2s;
     }
-    .left-column a:hover { color: #666; } 
+    .left-column a:hover { color: #666; } /* grey only on hover */
 
     .right-column {
       flex: 1 1 0;
@@ -104,6 +107,7 @@
       }
       .right-column { justify-content: center; }
       .profile-photo { width: 80%; height: auto; }
+      nav .name { margin-left: 0; text-align: center; }
     }
   </style>
 </head>
