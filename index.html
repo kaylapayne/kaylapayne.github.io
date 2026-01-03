@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kayla Payne</title>
-  
-
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -15,45 +13,64 @@
       font-family: 'IBM Plex Sans', system-ui, sans-serif;
       background-color: #fefefe;
       color: #222;
-      display: flex;
-      min-height: 100vh;
-    }
-
-
-    .sidebar {
-      width: 220px;
-      background-color: #fafafa;
-      border-right: 1px solid #ddd;
+      line-height: 1.6;
+      max-width: 1000px;
+      margin: 0 auto;
       padding: 40px 20px;
+    }
+
+    nav {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 80px;
     }
-    .sidebar h1 {
-      font-size: 1.8rem;
-      margin-bottom: 50px;
+    nav .name {
+      font-weight: 700;
+      font-size: 1.5rem;
     }
-    .sidebar a {
+    nav .links a {
+      margin-left: 30px;
       text-decoration: none;
-      color: #222;
       font-weight: 600;
-      margin-bottom: 25px;
+      color: #222;
       transition: color 0.2s;
     }
-    .sidebar a:hover {
+    nav .links a:hover {
       color: #0066cc;
     }
 
-
-    .main {
-      flex: 1;
-      padding: 60px 50px;
+    .content {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+      gap: 60px;
     }
 
+    .section-about h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .section-about p {
+      font-size: 1.2rem;
+      max-width: 700px;
+    }
+
+    .section-link h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .section-link p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin-bottom: 10px;
+    }
+    .section-link a {
+      text-decoration: none;
+      color: #0066cc;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .section-link a:hover { color: #004499; }
 
     .profile-photo {
       width: 350px;
@@ -64,65 +81,52 @@
       margin-bottom: 40px;
     }
 
-
-    .intro {
-      max-width: 600px;
-      text-align: center;
-    }
-    .intro h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-    .intro p {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-    .intro a {
-      margin-right: 20px;
-      font-weight: 600;
-    }
-
-
-    @media(max-width: 900px){
-      body {
+    @media (max-width: 900px) {
+      nav {
         flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
       }
-      .sidebar {
+      .content {
+        gap: 40px;
+      }
+      .profile-photo {
         width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-        padding: 20px 0;
+        height: auto;
       }
-      .sidebar h1 { display: none; }
-      .main { padding: 40px 20px; }
     }
   </style>
 </head>
 <body>
 
-
-  <div class="sidebar">
-    <h1>Kayla Payne</h1>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="research.html">Research</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-
-  <div class="main">
-    <img src="WebsiteProfile.jpeg" alt="Kayla Payne" class="profile-photo" />
-    <div class="intro">
-      <h2>About Me</h2>
-      <p>I am an undergraduate in Engineering Physics in the Electrical Engineering option at Queen’s University.</p>
-      <p>I have broad interests in space research, cosmology, and space mission systems engineering.</p>
-      <p>
-        <a href="https://www.linkedin.com/in/kayla-payne-4068b42a6/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/kaylapayne" target="_blank">GitHub</a>
-      </p>
+  <nav>
+    <div class="name">Kayla Payne</div>
+    <div class="links">
+      <a href="research.html">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
     </div>
+  </nav>
+
+  <div class="content">
+
+    <div class="section-about">
+      <h1>About</h1>
+      <p>I am an undergraduate in Engineering Physics in the Electrical Engineering option at Queen’s University. I have broad interests in space research, cosmology, and space mission systems engineering.</p>
+    </div>
+
+    <div class="section-link">
+      <h2><a href="research.html">Research</a></h2>
+      <p>Currently working on observational star formation and cosmology projects, including simulations and Hubble parameter analysis using DESI data.</p>
+    </div>
+
+    <div class="section-link">
+      <h2><a href="projects.html">Projects</a></h2>
+      <p>Highlights include the High Altitude Muon Detector mission and the Lunar Rover Auxiliary Traction Mechanism design.</p>
+    </div>
+
+    <img src="WebsiteProfile.jpeg" alt="Kayla Payne" class="profile-photo" />
+
   </div>
 
 </body>
