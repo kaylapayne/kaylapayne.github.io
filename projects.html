@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects – Kayla Payne</title>
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -15,8 +16,6 @@
       color: #222;
       line-height: 1.6;
       min-height: 100vh;
-      margin: 0;
-      padding: 0;
     }
 
     nav {
@@ -28,21 +27,25 @@
       max-width: 1200px;
       margin: 0 auto;
     }
+
     nav .name {
+      font-size: 3rem;
       font-weight: 500;
-      font-size: 3.0rem;
       margin-left: -40px;
     }
+
     nav .links a {
-      position: relative;
       margin-left: 30px;
       text-decoration: none;
+      font-size: 1.3rem;
       font-weight: 500;
       color: #222;
-      font-size: 1.3rem;
+      position: relative;
       transition: color 0.4s;
     }
+
     nav .links a:hover { color: #666; }
+
     nav .links a::after {
       content: '';
       position: absolute;
@@ -54,81 +57,86 @@
       transition: width 0.4s ease;
       transform: translateX(-50%);
     }
+
     nav .links a:hover::after { width: 100%; }
 
     .container {
-      display: flex;
       max-width: 1200px;
-      margin: 60px auto;
-      gap: 60px;
+      margin: 70px auto;
       padding: 0 20px;
-      flex-wrap: wrap;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .content-row {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
     }
 
     .left-column {
-      flex: 1 1 0;
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .left-column h1 {
-      font-size: 2.5rem;
-      font-weight: 500;
-      margin-bottom: 5px;
-    }
-    .left-column h2 {
-      font-size: 1.8rem;
-      font-weight: 500;
-      top-margin: 10px;
-      margin-bottom: 8px;
-    }
-    .left-column p {
-      font-size: 1.1rem;
-      max-width: 450px;
-      color: #333;
+      flex: 1;
+      max-width: 520px;
     }
 
     .right-column {
-      flex: 1 1 0;
+      flex: 1;
       display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #333;
     }
 
     .side-image {
       width: 100%;
       max-width: 500px;
       height: auto;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-      }
-      .left-column {
-        align-items: center;
-        text-align: center;
-      }
-      .right-column { justify-content: center; }
-      nav .name { margin-left: 0; text-align: center; }
     }
 
     footer {
+      margin-top: 80px;
+      padding: 12px 0;
       text-align: center;
-      padding: 10px 0;
       font-size: 0.8rem;
       color: #666;
       border-top: 1px solid #ddd;
-      margin-top: 60px;
+    }
+
+    @media (max-width: 900px) {
+      nav .name {
+        margin-left: 0;
+        text-align: center;
+      }
+
+      .content-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .left-column {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <nav>
@@ -143,44 +151,53 @@
   </nav>
 
   <div class="container">
-    <div class="left-column">
-      <div id="projects">
+
+    <div class="content-row">
+      <div class="left-column">
         <h1>Projects</h1>
+        <h2>High Altitude Muon Detector</h2>
+        <p>
+          I led a team designing and building a muon detector to fly on a weather balloon at 30,000 m. The design was optimized from an MIT detector to minimize mass, volume, and power consumption while operating from 100 kPa to 1 kPa and temperatures from 25°C to −55°C. I developed software to store muon detection rate data as a function of altitude and oversaw circuitry design, Arduino coding, PCB assembly, scintillator assembly, testing, troubleshooting, and deployment, culminating in a successful launch in April 2024.
+        </p>
+      </div>
 
-        <div>
-          <h2>High Altitude Muon Detector</h2>
-          <p>I led a team designing and building a muon detector to fly on a weather balloon at 30,000m. A design was optimized based on a detector developed by a group at MIT to minimize mass, volume, and power consumption while functioning at pressures of 100kPa to 1kPa and temperatures of 25ºC to -55ºC. I developed software to store muon detection-rate data collected as a function of altitude. I also oversaw circuitry design, Arduino coding, PCB assembly, scintillator crystal assembly, testing, troubleshooting and deployment, resulting in a successful launch in April 2024.
-
-          </p>
-        </div>
-
-        <div>
-          <h2>Lunar Rover Auxiliary Traction Mechanism</h2>
-          <p>
-            Mechanical and systems design of an auxiliary traction mechanism for a lunar rover, focusing on reliability in regolith, dimensional constraints, and integration with existing rover subsystems.
-          </p>
-        </div>
-
-        <div>
-          <h2>European Space Agency Concurrent Engineering Workshop - Mission Feasibility Study</h2>
-          <p>
-            I worked with ESA trainers during a week-long Phase 0 feasibility study using COMET as a member of the payload team. I researched high-TRL instruments and performed preliminary data-rate and FOV/resolution calculations, as well as collaborated with teams in ESA’s concurrent design framework, optimizing power, mass, and payload integration. Overall, I supported the mission’s objectives: map Jupiter’s magnetosphere, image the Great Red Spot, and demonstrate solar sail technology.
-          </p>
-        </div>
-
+      <div class="right-column">
+        <img src="muon_detector.jpeg" alt="High Altitude Muon Detector" class="side-image">
       </div>
     </div>
 
-    <div class="right-column">
-      <img src="muon_detector.jpeg" alt="Muon Detector" class="side-image">
-      <img src="lunar_rover_APSC103.jpg" alt="Lunar Rover Auxiliary Traction Mechanism" class="side-image">
-      <img src="ESA_CEW_presenting.jpg" alt="ESA CEW Kayla Presenting" class="side-image">
+    <div class="content-row">
+      <div class="left-column">
+        <h2>Lunar Rover Auxiliary Traction Mechanism</h2>
+        <p>
+          Mechanical and systems design of an auxiliary traction mechanism for a lunar rover, focusing on reliability in regolith, dimensional constraints, and integration with existing rover subsystems.
+        </p>
+      </div>
+
+      <div class="right-column">
+        <img src="lunar_rover_APSC103.jpg" alt="Lunar Rover Auxiliary Traction Mechanism" class="side-image">
+      </div>
     </div>
+
+    <div class="content-row">
+      <div class="left-column">
+        <h2>European Space Agency Concurrent Engineering Workshop</h2>
+        <p>
+          Participated in a week-long Phase 0 mission feasibility study using ESA’s COMET tool as a member of the payload team. I researched high-TRL instruments, performed preliminary data-rate and field-of-view calculations, and collaborated within ESA’s concurrent design framework to optimize power, mass, and payload integration. The mission objectives included mapping Jupiter’s magnetosphere, imaging the Great Red Spot, and demonstrating solar sail technology.
+        </p>
+      </div>
+
+      <div class="right-column">
+        <img src="ESA_CEW_presenting.jpg" alt="ESA Concurrent Engineering Workshop" class="side-image">
+      </div>
+    </div>
+
   </div>
 
   <footer>
-    <p>© 2026 Kayla Payne</p>
+    © 2026 Kayla Payne
   </footer>
 
 </body>
 </html>
+
