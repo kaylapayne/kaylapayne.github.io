@@ -13,43 +13,74 @@
       line-height: 1.6;
       color: #222;
     }
-    h1 { font-size: 2.8rem; margin: 0.2em 0; }
+
+    nav {
+      text-align: right;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #0066cc;
+      text-decoration: none;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    .profile-container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap; /* responsive for small screens */
+    }
+
     .profile-photo {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
+      width: 250px;
+      height: 250px;
       object-fit: cover;
       border: 3px solid #ddd;
-      margin-bottom: 0.6em;
     }
-    .center { text-align: center; }
-    a { color: #0066cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+
+    .intro-text {
+      flex: 1; /* take remaining space */
+      min-width: 250px; /* prevents squishing too much on small screens */
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin: 0 0 0.5em 0;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
 
-<nav style="text-align:right; margin-bottom: 30px;">
+<nav>
   <a href="index.html">Home</a>
   <a href="projects.html">Projects</a>
   <a href="research.html">Research</a>
   <a href="contact.html">Contact</a>
 </nav>
 
-<div class="center">
+<div class="profile-container">
   <img src="WebsiteProfile.jpeg" alt="Kayla Payne" class="profile-photo" />
-  <h1>Kayla Payne</h1>
-  <p>
-    <a href="https://www.linkedin.com/in/kayla-payne-4068b42a6/" target="_blank">LinkedIn</a> ·
-    <a href="https://github.com/kaylapayne" target="_blank">GitHub</a>
-  </p>
-</div>
-
-<div>
-  <h2>About Me</h2>
-  <p>I am an undergraduate in Engineering Physics in the Electrical Engineering option at Queen’s University. I have broad interests in space research, cosmology, and space mission systems engineering.</p>
+  <div class="intro-text">
+    <h1>Kayla Payne</h1>
+    <p>I am an undergraduate in Engineering Physics in the Electrical Engineering option at Queen’s University. I have broad interests in space research, cosmology, and space mission systems engineering.</p>
+    <p>
+      <a href="https://www.linkedin.com/in/kayla-payne-4068b42a6/" target="_blank">LinkedIn</a> ·
+      <a href="https://github.com/kaylapayne" target="_blank">GitHub</a>
+    </p>
+  </div>
 </div>
 
 </body>
 </html>
-
